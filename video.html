@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Watch | R2 Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<!-- TOP BAR -->
+<header class="top-bar">
+  <div class="left">
+    <button id="menuBtn">☰</button>
+    <span class="logo">R2 Studio</span>
+  </div>
+
+  <div class="center">
+    <input type="text" placeholder="Search">
+  </div>
+
+  <div class="right">
+    <button id="loginBtn">Login</button>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="trending.html">Trending</a>
+  <a href="subscriptions.html">Subscriptions</a>
+  <a href="library.html">Library</a>
+  <a href="upload.html">Upload</a>
+  <a href="settings.html">Settings</a>
+</aside>
+
+<!-- MAIN -->
+<main class="watch-page">
+
+  <!-- VIDEO -->
+  <video id="videoPlayer" controls></video>
+
+  <!-- TITLE -->
+  <h2 id="videoTitle"></h2>
+
+  <!-- ACTIONS (VIDEO KE SAATH) -->
+  <div class="actions">
+
+  <button id="likeBtn" onclick="toggleLike()">
+    <span class="icon">👍</span>
+    <span id="likeCount">0</span>
+  </button>
+
+  <button id="dislikeBtn" onclick="toggleDislike()">
+    <span class="icon">👎</span>
+    <span id="dislikeCount">0</span>
+  </button>
+
+  <button onclick="shareVideo()">
+    <span class="icon">🔗</span>
+    <span id="shareCount">0</span>
+  </button>
+
+  <button id="saveBtn" onclick="toggleSave()">
+    <span class="icon">💾</span>
+  </button>
+
+</div>
+
+  <!-- CHANNEL BAR -->
+  <div class="channel-bar">
+    <div class="channel-left">
+      <div class="avatar">R2</div>
+      <div>
+        <div id="channelName" onclick="openChannel()" class="channel-link"></div>
+        <small id="subCount">0 subscribers</small>
+      </div>
+    </div>
+    <button id="subBtn" class="subscribe-btn">Subscribe</button>
+  </div>
+
+  <!-- COMMENTS -->
+  <div class="comment-section">
+    <h3>Comments</h3>
+
+    <div class="comment-box">
+      <input id="commentInput" placeholder="Add a comment">
+      <button onclick="addComment()">Post</button>
+    </div>
+
+    <div id="commentList"></div>
+  </div>
+
+  <!-- NEXT VIDEOS -->
+  <h3>Next Videos</h3>
+  <div class="video-grid" id="nextVideos"></div>
+
+</main>
+
+<script src="js/video.js"></script>
+<script src="js/actions.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>

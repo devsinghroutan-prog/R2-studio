@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library | R2 Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<!-- TOP BAR -->
+<header class="top-bar">
+  <div class="left">
+    <button id="menuBtn">☰</button>
+    <span class="logo">R2 Studio</span>
+  </div>
+  <div class="center">
+    <input type="text" placeholder="Search">
+  </div>
+  <div class="right">
+    <button id="loginBtn">Login</button>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="trending.html">Trending</a>
+  <a href="subscriptions.html">Subscriptions</a>
+  <a href="library.html">Library</a>
+  <a href="upload.html">Upload</a>
+  <a href="settings.html">Settings</a>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+  <h2>Library</h2>
+
+  <!-- HISTORY -->
+  <h3>History</h3>
+  <div class="video-grid" id="historyGrid"></div>
+
+  <!-- LIKED -->
+  <h3>Liked Videos</h3>
+  <div class="video-grid" id="likedGrid"></div>
+
+  <!-- SAVED -->
+  <h3>Saved Videos</h3>
+  <div class="video-grid" id="savedGrid"></div>
+
+  <!-- YOUR VIDEOS -->
+  <h3>Your Videos</h3>
+  <div class="video-grid" id="yourGrid"></div>
+
+</main>
+
+<script src="js/library.js"></script>
+<script src="js/search.js"></script>
+<script src="js/navbar.js"></script>
+
+</body>
+</html>

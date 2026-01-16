@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Upload | R2 Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<!-- TOP BAR -->
+<header class="top-bar">
+  <div class="left">
+    <button id="menuBtn">☰</button>
+    <span class="logo">R2 Studio</span>
+  </div>
+  <div class="center">
+    <input type="text" placeholder="Search">
+  </div>
+  <div class="right">
+    <button id="loginBtn">Login</button>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="trending.html">Trending</a>
+  <a href="subscriptions.html">Subscriptions</a>
+  <a href="library.html">Library</a>
+  <a href="upload.html">Upload</a>
+  <a href="settings.html">Settings</a>
+</aside>
+
+<!-- MAIN -->
+<main class="main upload-page">
+
+  <h2>Upload Video</h2>
+
+  <input id="title" placeholder="Video title"><br><br>
+  <input id="channel" placeholder="Channel name"><br><br>
+
+  <!-- direct paths (for now) -->
+  <input id="thumbPath" placeholder="Thumbnail path (images/xxx.jpg)"><br><br>
+  <input id="videoPath" placeholder="Video path (videos/xxx.mp4)"><br><br>
+
+  <button id="uploadBtn">Upload</button>
+
+</main>
+
+<script src="js/upload.js"></script>
+<script src="js/navbar.js"></script>
+
+</body>
+</html>

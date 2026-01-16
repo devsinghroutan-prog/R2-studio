@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Channel | R2 Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<!-- TOP BAR -->
+<header class="top-bar">
+  <div class="left">
+    <button id="menuBtn">☰</button>
+    <span class="logo">R2 Studio</span>
+  </div>
+  <div class="center">
+    <input type="text" placeholder="Search">
+  </div>
+  <div class="right">
+    <button id="loginBtn">Login</button>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="trending.html">Trending</a>
+  <a href="subscriptions.html">Subscriptions</a>
+  <a href="library.html">Library</a>
+  <a href="upload.html">Upload</a>
+  <a href="settings.html">Settings</a>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- CHANNEL HEADER -->
+  <div class="channel-header">
+    <div class="channel-left">
+      <div class="avatar big">R2</div>
+      <div>
+        <h2 id="channelTitle"></h2>
+        <p id="channelSubs">0 subscribers</p>
+      </div>
+    </div>
+    <button id="subBtn" class="subscribe-btn">Subscribe</button>
+  </div>
+
+  <!-- CHANNEL VIDEOS -->
+  <h3>Videos</h3>
+  <div class="video-grid" id="channelGrid"></div>
+
+</main>
+
+<script src="js/channel.js"></script>
+<script src="js/search.js"></script>
+<script src="js/navbar.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,426 @@
+/* basic */
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f0f0f;
+  color:#fff;
+}
+.dark{ background:#0f0f0f; color:#fff; }
+.light{ background:#fff; color:#000; }
+
+/* top bar */
+.top-bar{
+  height:56px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 16px;
+  background:#202020;
+}
+.top-bar button{
+  background:none;
+  border:none;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+}
+.logo{ font-weight:bold; }
+
+.center input{
+  width:300px;
+  padding:6px 10px;
+  border-radius:20px;
+  border:none;
+}
+
+/* sidebar */
+.sidebar{
+  position:fixed;
+  top:56px;
+  left:0;
+  width:200px;
+  height:100%;
+  background:#202020;
+  padding:10px;
+  transform:translateX(-100%);
+  transition:0.3s;
+  z-index:100;
+}
+
+.sidebar a{
+  display:block;
+  padding:10px;
+  color:white;
+  text-decoration:none;
+}
+
+.sidebar.active{
+  transform:translateX(0);
+}
+
+
+/* main push */
+.main,
+.watch-page{
+  margin-left:0;
+  transition:0.3s;
+}
+
+body.sidebar-open .main,
+body.sidebar-open .watch-page{
+  margin-left:200px;
+}
+
+/* video grid */
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:20px;
+}
+
+.video-card{
+  cursor:pointer;
+}
+
+.video-thumb{
+  height:150px;
+  background:#000;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.video-thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.video-info{
+  margin-top:8px;
+}
+.video-info h4{
+  margin:4px 0;
+  font-size:15px;
+}
+.video-info p{
+  margin:0;
+  font-size:13px;
+  color:#aaa;
+}
+/* watch page */
+.watch-page{
+  padding:20px;
+}
+
+video{
+  width:100%;
+  max-height:480px;
+  background:#000;
+}
+
+/* channel bar */
+.channel-bar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:10px 0;
+  border-top:1px solid #333;
+  border-bottom:1px solid #333;
+  padding:10px 0;
+}
+
+.channel-left{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#ff0000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+}
+
+.subscribe-btn{
+  background:red;
+  color:white;
+  border:none;
+  padding:8px 16px;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+.subscribe-btn.subscribed{
+  background:#444;
+}
+
+/* actions */
+/* actions (youtube style) */
+.actions{
+  display:flex;
+  gap:16px;
+  margin:12px 0;
+}
+
+.actions button{
+  background:none;
+  border:none;
+  color:white;
+  font-size:14px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.actions button:hover{
+  color:#3ea6ff;
+}
+
+
+
+/* comments */
+.comment-section{
+  max-width:700px;
+  margin:40px auto;
+}
+
+.comment-box{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.comment-box input{
+  flex:1;
+  padding:8px 10px;
+  border:none;
+  border-radius:20px;
+}
+
+.comment-box button{
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#3ea6ff;
+  color:#fff;
+  cursor:pointer;
+}
+
+.comment{
+  border-bottom:1px solid #333;
+  padding:10px 0;
+}
+
+.comment b{
+  font-size:13px;
+}
+
+.comment p{
+  margin:4px 0 0;
+  font-size:14px;
+}
+
+/* trending badge */
+.rank-badge{
+  position:absolute;
+  top:8px;
+  left:8px;
+  background:#ff0000;
+  color:#fff;
+  font-size:12px;
+  padding:4px 6px;
+  border-radius:4px;
+}
+.video-card{
+  position:relative;
+}
+/* empty message */
+.empty-msg{
+  text-align:center;
+  margin-top:80px;
+  color:#aaa;
+  font-size:18px;
+}
+/* library section spacing */
+.main h3{
+  margin-top:30px;
+}
+/* upload page */
+.upload-page{
+  max-width:600px;
+  margin:auto;
+}
+
+.upload-page input{
+  width:100%;
+  padding:8px;
+  border-radius:6px;
+  border:none;
+}
+
+.upload-page button{
+  padding:10px 20px;
+  background:red;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+}
+/* login page */
+.login-box{
+  max-width:360px;
+  margin:100px auto;
+  padding:20px;
+  background:#202020;
+  border-radius:10px;
+  text-align:center;
+}
+
+.login-box input{
+  width:100%;
+  padding:8px;
+  border:none;
+  border-radius:6px;
+}
+
+.login-box button{
+  width:100%;
+  padding:10px;
+  background:red;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+}
+/* settings page */
+.settings-page{
+  max-width:600px;
+  margin:auto;
+}
+
+.setting-item{
+  margin:20px 0;
+  padding:15px;
+  background:#202020;
+  border-radius:8px;
+}
+
+.setting-item h4{
+  margin:0 0 8px;
+}
+
+.danger{
+  background:#ff0000;
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  cursor:pointer;
+}
+/* channel page */
+.channel-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
+  border-bottom:1px solid #333;
+}
+
+.avatar.big{
+  width:60px;
+  height:60px;
+  font-size:20px;
+}
+/* ================= LOGIN PAGE ================= */
+
+.login-body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:#0f0f0f;
+}
+
+.auth-box{
+  width:360px;
+  padding:25px;
+  background:#202020;
+  border-radius:10px;
+  text-align:center;
+}
+
+.auth-box h2{
+  margin-bottom:20px;
+}
+
+.auth-box input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border:none;
+  border-radius:6px;
+}
+
+.auth-box button{
+  width:100%;
+  padding:10px;
+  background:#ff0000;
+  border:none;
+  color:#fff;
+  font-size:15px;
+  cursor:pointer;
+  border-radius:6px;
+}
+
+.switch-text{
+  margin-top:15px;
+  font-size:14px;
+}
+
+.switch-text span{
+  color:#3ea6ff;
+  cursor:pointer;
+}
+.channel-link:hover{
+  text-decoration:underline;
+}
+/* ===== ACTIONS (YouTube style) ===== */
+.actions{
+  display:flex;
+  gap:14px;
+  margin:12px 0;
+}
+
+.actions button{
+  background:#1f1f1f;
+  border:none;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:18px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:14px;
+}
+
+.actions button .icon{
+  font-size:16px;
+}
+
+.actions button span{
+  color:#aaa;
+}
+
+.actions button.active{
+  background:#303030;
+  color:#3ea6ff;
+}
+
+.actions button:hover{
+  background:#2c2c2c;
+}

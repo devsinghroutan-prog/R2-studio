@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Settings | R2 Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<!-- TOP BAR -->
+<header class="top-bar">
+  <div class="left">
+    <button id="menuBtn">☰</button>
+    <span class="logo">R2 Studio</span>
+  </div>
+  <div class="center">
+    <input type="text" placeholder="Search">
+  </div>
+  <div class="right">
+    <button id="loginBtn">Logout</button>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="trending.html">Trending</a>
+  <a href="subscriptions.html">Subscriptions</a>
+  <a href="library.html">Library</a>
+  <a href="upload.html">Upload</a>
+  <a href="settings.html">Settings</a>
+</aside>
+
+<!-- MAIN -->
+<main class="main settings-page">
+
+  <h2>Settings</h2>
+
+  <!-- EMAIL -->
+  <div class="setting-item">
+    <h4>Account</h4>
+    <p id="userEmail">Not logged in</p>
+  </div>
+
+  <!-- THEME -->
+  
+  <!-- LOGOUT -->
+  <div class="setting-item">
+    <button id="logoutBtn" class="danger">Logout</button>
+  </div>
+
+</main>
+
+<script src="js/settings.js"></script>
+<script src="js/navbar.js"></script>
+
+</body>
+</html>
