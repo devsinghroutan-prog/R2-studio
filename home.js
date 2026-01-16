@@ -23,14 +23,14 @@ if (!localStorage.getItem("videos")) {
       title: "First Bike Ride",
       channel: "R2 Rider",
       thumbnail: "bike.jpg",
-      videoSrc: "bike1.mp4"
+      videoSrc: "bike.mp4"
     },
     {
       id: Date.now() + 1,
       title: "Second Bike Ride",
       channel: "R2 Rider",
       thumbnail: "images/",
-      videoSrc: "bike.mp4"
+      videoSrc: "bike1.mp4"
     }
   ];
   saveVideos(defaultVideos);
@@ -62,4 +62,5 @@ videos.forEach(video => {
 
   videoGrid.appendChild(card);
 });
+
 
